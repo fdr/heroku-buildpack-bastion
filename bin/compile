@@ -1,0 +1,15 @@
+#!/bin/bash
+set -ue
+
+if [[ ! ("$STACK" = "cedar" || "$STACK" = "cedar-14") ]];
+then
+    exit 0
+fi
+
+build_dir=$1
+
+mkdir -p "$build_dir/.config/bastion"
+cp -a tunnel-env "$build_dir/.config/bastion"
+
+mkdir -p "$build_dir/.profile.d"
+cp -a profile.sh "$build_dir/.profile.d"
