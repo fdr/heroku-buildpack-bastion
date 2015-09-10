@@ -8,7 +8,7 @@ use of SSH bastions to access network endpoints, such as databases.
     $ heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-multi.git -a sushi
 
     $ echo 'https://github.com/heroku/heroku-buildpack-ruby.git
-    https://github.com/heroku/heroku-buildpack-ruby.git' > .buildpacks
+    https://github.com/heroku/heroku-buildpack-bastion.git' > .buildpacks
 
     $ git add .buildpacks
 	$ git commit -m'Enable Bastion build pack'
